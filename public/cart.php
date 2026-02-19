@@ -7,7 +7,6 @@ $uid = (int)$_SESSION["user_id"];
 $msg = "";
 $error = "";
 
-// actions
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cart_id = (int)($_POST["cart_id"] ?? 0);
     $action  = $_POST["action"] ?? "";
@@ -48,7 +47,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-// list
 $stmt = $mysqli->prepare("
     SELECT c.id AS cart_id, c.quantity,
            a.id AS article_id, a.name, a.price, a.image_link,
@@ -79,10 +77,9 @@ foreach ($items as $it) {
 
 <div class="container">
 
-  <!-- HEADER -->
   <div class="nav">
     <div class="brand">
-      <a href="/php_exam/public/" class="brand">FigurineStore</a>
+      <a href="/php_exam/public/" class="brand">GameRelic</a>
       <span class="badge">E-commerce PHP</span>
     </div>
 
@@ -171,9 +168,6 @@ foreach ($items as $it) {
           </div>
           <a class="btn primary" href="/php_exam/public/validate.php">Valider la commande</a>
         </div>
-        <p class="muted" style="margin-top:10px;">
-          (On code la page <strong>validate.php</strong> juste après.)
-        </p>
       </div>
     </div>
   <?php endif; ?>

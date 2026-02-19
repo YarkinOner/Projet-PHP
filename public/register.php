@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <a href="/php_exam/public/" class="brand">FigurineStore</a>
+        <a href="/php_exam/public/" class="brand">GameRelic</a>
         <span class="badge">E-commerce PHP</span>
       </div>
 
